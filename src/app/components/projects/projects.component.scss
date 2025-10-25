@@ -1,0 +1,10 @@
+/* projects styles */
+.card-glass {
+    border-radius: 12px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card-glass:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
