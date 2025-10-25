@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   projects = [
     {
-      title: 'Audit Delta Calculations Service',
-      subtitle: 'High-performance backend',
-      points: ['100% accuracy in delta computations', 'Improved processing efficiency', 'Kafka + Logstash integration']
+      title: 'Backend Development',
+      subtitle: 'Multiple Services',
+      points: ['100% accuracy in delta computations', 'Kafka + Logstash integration', 'Handled 4+ Services simultaneously']
+    },
+    {
+      title: 'Frontend Development',
+      subtitle: 'Low code platform',
+      points: ['Angular-based low-code', 'Plugin architecture for rapid customization and scalability', 'Used by 400+ customers worldwide']
     },
     {
       title: 'Audit AI Agent & UI',
@@ -19,13 +24,8 @@ export class ProjectsComponent {
     },
     {
       title: 'Microsoft Teams App',
-      subtitle: 'Collaboration utilities',
+      subtitle: 'Collaboration Utilities',
       points: ['Built from scratch', 'AI-powered helpers', 'PoC for next-gen features']
-    },
-    {
-      title: 'Migration Notebook',
-      subtitle: 'Data migration',
-      points: ['ADB notebook to migrate legacy audit data', 'Improved migration efficiency by 70%']
     }
   ];
 }

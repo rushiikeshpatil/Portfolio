@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
     { path: 'about', component: AboutComponent, data: { animation: 'About' } },
     { path: 'projects', component: ProjectsComponent, data: { animation: 'Projects' } },
     { path: 'contact', component: ContactComponent, data: { animation: 'Contact' } },
+    { path: 'experience', component: ExperienceComponent, data: { animation: 'Experience' } },
     { path: '**', redirectTo: 'home' }
 ];
 
