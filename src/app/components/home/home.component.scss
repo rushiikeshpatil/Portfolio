@@ -15,3 +15,11 @@
 .text-justify {
     text-align: justify;
 }
+
+.align-itemsto-center {
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+}
