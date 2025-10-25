@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-1: #0f0f0f;
+    --bg-2: #141414;
+    --accent-start: #8a3fe8;
+    --accent-end: #5c3ad6;
+    --muted: #9aa1a8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+    color: #eaeef2;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Glass card */
+.card-glass {
+    background: rgba(20, 20, 20, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Accent buttons */
+.btn-accent {
+    background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+    color: white;
+    border: none;
+}
+
+/* Small utility */
+.text-muted-soft {
+    color: var(--muted);
+}
+
+/* Sticky bottom nav style */
+.bottom-nav {
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+    padding: 10px;
+    margin-top: 10px;
+    backdrop-filter: blur(6px);
+}
+
+.bottom-nav .nav-link {
+    color: #cbd5e1;
+}
+
+.bottom-nav .nav-link.active {
+    color: white;
+}
+
+/* Responsive spacing */
+.container-hero {
+    padding: 40px 20px;
+}
+
+@media(min-width: 768px) {
+    .container-hero {
+        padding: 60px 30px;
+    }
+}
