@@ -1,128 +1,31 @@
 <section class="container container-hero">
-    <div class="experience-header animate-on-scroll">
-        <h2 class="gradient-text text-center mb-4">Work Experience</h2>
-        <p class="text-center text-muted-soft lead">Building innovative solutions with cutting-edge technology</p>
-    </div>
-
-    <!-- Timeline -->
-    <div class="timeline-container mt-5">
-        <!-- Current Position -->
-        <div class="timeline-item current animate-on-scroll delay-1">
-            <div class="timeline-marker current">
-                <i class="bi bi-briefcase-fill"></i>
-            </div>
-            <div class="timeline-content card-glass p-4">
-                <div class="timeline-header">
-                    <div class="position-info">
-                        <h4 class="gradient-text mb-1">Software Engineer</h4>
-                        <h6 class="text-muted-soft mb-2">GEP Solutions, Navi Mumbai</h6>
-                        <span class="timeline-date">June 2021 - Present</span>
-                    </div>
-                    <div class="position-badge">
-                        <span class="badge current-badge">Current</span>
-                    </div>
-                </div>
-
-                <div class="timeline-description mt-3">
-                    <p class="text-muted-soft" style="text-align: justify;">
-                        Developed scalable audit solutions, including the Audit Delta Calculations Service and
-                        Angular-based UI used by 400+ customers, integrating AI features to reduce manual effort and
-                        improve efficiency. Optimized backend workflows with Kafka and Logstash, built reusable low-code
-                        components, implemented Blue-Green Deployments for zero-downtime releases, and ensured
-                        accessibility, monitoring, and system reliability, while mentoring juniors and collaborating
-                        with stakeholders.
-                    </p>
-                </div>
-
-                <div class="achievements-grid mt-4">
-                    <div class="achievement-card">
-                        <i class="bi bi-people-fill text-primary"></i>
-                        <div>
-                            <div class="achievement-title">400+ Customers</div>
-                            <div class="achievement-desc">Global reach</div>
-                        </div>
-                    </div>
-                    <div class="achievement-card">
-                        <i class="bi bi-speedometer2 text-success"></i>
-                        <div>
-                            <div class="achievement-title">100% Accuracy</div>
-                            <div class="achievement-desc">Delta calculations</div>
-                        </div>
-                    </div>
-                    <div class="achievement-card">
-                        <i class="bi bi-robot text-info"></i>
-                        <div>
-                            <div class="achievement-title">AI Integration</div>
-                            <div class="achievement-desc">30-35 min saved</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Internships -->
-        <div class="timeline-item animate-on-scroll delay-2" *ngFor="let internship of internships; let i = index">
-            <div class="timeline-marker">
-                <i class="bi bi-graduation-cap-fill"></i>
-            </div>
-            <div class="timeline-content card-glass p-4">
-                <div class="timeline-header">
-                    <div class="position-info">
-                        <h5 class="gradient-text mb-1">{{ internship.role }}</h5>
-                        <h6 class="text-muted-soft mb-2">{{ internship.organization }}</h6>
-                    </div>
-                    <div class="position-badge">
-                        <span class="badge internship-badge">Internship</span>
-                    </div>
-                </div>
-
-                <div class="timeline-description mt-3">
-                    <div class="work-item" *ngFor="let work of internship.work">
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        <span style="text-align: justify;">{{ work }}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Skills Timeline -->
-    <div class="row mt-5">
+    <h3>Work Experience</h3>
+    <div class="row mt-3 g-3">
         <div class="col-12">
-            <div class="card-glass p-4 animate-on-scroll delay-3">
-                <h4 class="gradient-text text-center mb-4">
-                    <i class="bi bi-tools me-2"></i>Technical Journey
-                </h4>
-                <div class="skills-timeline">
-                    <div class="skill-milestone">
-                        <div class="milestone-year">2022</div>
-                        <div class="milestone-content">
-                            <h6>Started Professional Journey</h6>
-                            <p>.NET Core, Angular, Azure</p>
-                        </div>
-                    </div>
-                    <div class="skill-milestone">
-                        <div class="milestone-year">2023</div>
-                        <div class="milestone-content">
-                            <h6>Advanced Backend Development</h6>
-                            <p>Microservices, Kafka, MongoDB</p>
-                        </div>
-                    </div>
-                    <div class="skill-milestone">
-                        <div class="milestone-year">2024</div>
-                        <div class="milestone-content">
-                            <h6>AI Integration & Automation</h6>
-                            <p>LLMs, AI Agents, Automation</p>
-                        </div>
-                    </div>
-                    <div class="skill-milestone">
-                        <div class="milestone-year">2025</div>
-                        <div class="milestone-content">
-                            <h6>Full-Stack Excellence</h6>
-                            <p>Teams Apps, Advanced AI</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="card-glass p-4">
+                <h4>Software Engineer</h4>
+                <hr>
+                <h6>GEP Solutions, Navi Mumbai | June 2021 - Present</h6>
+                <p class="text-muted-soft text-justify">
+                    Developed scalable audit solutions, including the Audit Delta Calculations
+                    Service and Angular-based UI used by 400+ customers, integrating AI features to reduce manual effort
+                    and improve efficiency. Optimized backend workflows with Kafka and Logstash, built reusable low-code
+                    components, implemented Blue-Green Deployments for zero-downtime releases, and ensured
+                    accessibility, monitoring, and system reliability, while mentoring juniors and collaborating with
+                    stakeholders.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3 g-3">
+        <div class="col-md-6" *ngFor="let internship of internships">
+            <div class="card-glass p-4 h-100">
+                <h5>{{ internship.role }}</h5>
+                <h6 class="text-muted-soft">{{ internship.organization }}</h6>
+                <ul class="mt-3 text-muted-soft">
+                    <li *ngFor="let i of internship.work">{{ i }}</li>
+                </ul>
             </div>
         </div>
     </div>
