@@ -12,6 +12,8 @@ Angular 17 portfolio with Bootstrap 5 — dark professional theme, animations, a
 npm install
 ng serve
 push changes do this:
--ng build --configuration=production --base-href "/Portfolio/"
--npx angular-cli-ghpages --dir=dist/rushikesh-portfolio-bootstrap --branch=gh-pages --no-silent
+- ng build --configuration=production --base-href "/Portfolio/"
+- npx angular-cli-ghpages --dir=dist/rushikesh-portfolio-bootstrap --branch=gh-pages --no-silent
+
+URL:
 -https://rushiikeshpatil.github.io/Portfolio/home

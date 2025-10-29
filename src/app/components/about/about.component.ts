@@ -15,7 +15,7 @@ export class AboutComponent {
     {
       degree: 'Diploma in Information Technology, 2020',
       institute: 'Padmashree Dr. D. Y. Patil School of Polytechnic, Navi Mumbai',
-      score: ['94.56% (First Rank in College)']
+      score: ['94.56%']
     }
   ];
 }
