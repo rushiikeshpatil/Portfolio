@@ -1,9 +1,316 @@
-/* contact styles */
-.card-glass {
+/* Contact component enhanced styles */
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    height: 100%;
+}
+
+.contact-intro h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.contact-methods {
+    margin: 2rem 0;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(99, 102, 241, 0.1);
     border-radius: 12px;
+    border-left: 3px solid var(--accent-start);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-method::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.contact-method:hover {
+    background: rgba(99, 102, 241, 0.15);
+    transform: translateX(5px);
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-method:hover::before {
+    left: 100%;
+}
+
+.method-icon {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.method-content {
+    flex: 1;
+}
+
+.method-content h6 {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.method-content p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.method-action {
+    margin-left: auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    color: var(--accent-start);
+}
+
+.contact-method:hover .method-action {
+    background: rgba(99, 102, 241, 0.3);
+    transform: scale(1.1);
+    color: var(--accent-end);
+}
+
+.quick-actions {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    height: 100%;
+}
+
+.contact-form h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
 .form-control {
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
+    color: var(--text-primary);
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
 }
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-start);
+    box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+    color: var(--text-primary);
+}
+
+.form-control::placeholder {
+    color: var(--muted);
+}
+
+.form-control:focus::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-actions {
+    margin-top: 2rem;
+}
+
+.info-item {
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+}
+
+.info-item i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-item h6 {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Form validation styles */
+.form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control.is-valid {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+
+.invalid-feedback.show {
+    display: block;
+}
+
+/* Ensure validation feedback only shows when form is submitted */
+.form-group:not(.was-validated) .invalid-feedback {
+    display: none !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact-header h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-method {
+        flex-direction: row;
+        text-align: left;
+        padding: 1rem;
+        align-items: center;
+    }
+    
+    .method-icon {
+        margin-right: 1rem;
+        margin-bottom: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    
+    .method-content {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .method-content h6 {
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .method-content p {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+    
+    .method-action {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+    }
+    
+    .contact-form h3,
+    .contact-intro h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .contact-method {
+        padding: 0.75rem;
+    }
+    
+    .method-icon {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.9rem;
+        margin-right: 0.75rem;
+    }
+    
+    .method-content h6 {
+        font-size: 0.85rem;
+    }
+    
+    .method-content p {
+        font-size: 0.75rem;
+    }
+    
+    .method-action {
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animation delays for staggered effect */
+.animate-on-scroll.delay-1 { animation-delay: 0.1s; }
+.animate-on-scroll.delay-2 { animation-delay: 0.2s; }
+.animate-on-scroll.delay-3 { animation-delay: 0.3s; }
+.animate-on-scroll.delay-4 { animation-delay: 0.4s; }
