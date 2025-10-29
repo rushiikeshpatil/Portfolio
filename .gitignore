@@ -1,41 +1,4 @@
-# See httnode_modules/
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-# Visual Studio files
-.vs/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# Angular CLI
-/.angular/cache
-.angular/
-
-# Profiling files
-chrome-profiler-events*.json
-
-# Node/ignore-files/ for more about ignoring files.
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Compiled output
 /dist
@@ -46,43 +9,67 @@ chrome-profiler-events*.json
 # Node modules
 node_modules/
 
-# VS / Visual Studio files
+# Angular CLI
+/.angular/cache
+.angular/
+
+# Profiling files
+chrome-profiler-events*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# IDE - Visual Studio
 .vs/
-.vscode/
-.angular
-# OS files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS
 .DS_Store
 Thumbs.db
 
-# Build / output folders
-dist/
-out-tsc/
-build/
-
-# Angular environment files (optional, if you don’t want secrets)
-src/environments/environment*.ts
-
-# Logs
+# Node
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .npm
-
-# PNPM
 .pnpm-debug.log*
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
 
 # Optional npm cache directory
 .npm
 
 # Optional eslint cache
 .eslintcache
-
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
 
 # Optional REPL history
 .node_repl_history
@@ -93,28 +80,16 @@ lerna-debug.log*
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
+# dotenv environment variables file
 .env
+.env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
-
-# Next.js build output
-.next
-out
-
-# Nuxt.js build / generate output
-.nuxt
-dist
-
-# Gatsby files
-.cache/
-public
 
 # Storybook build outputs
 .out
@@ -125,18 +100,32 @@ storybook-static
 tmp/
 temp/
 
-# Logs
-logs
-*.log
+# Firebase
+.firebase
+.firebaserc
+firebase.json
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# E2E
+e2e/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional Sass cache
+.sass-cache/
 
 # Windows image file caches
 Thumbs.db
@@ -157,60 +146,12 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Coverage directory used by tools like istanbul
-coverage/
-*.lcov
+# macOS
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 
-# nyc test coverage
-.nyc_output
-
-# Dependency directories
-jspm_packages/
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env
-.env.test
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
-
-# next.js build output
-.next
-
-# nuxt.js build output
-.nuxt
-
-# rollup.js default build output
-dist/
-
-# Uncomment the following line if you want to ignore the environment files
-# src/environments/environment.prod.ts
-
-# Firebase
-.firebase
-.firebaserc
-firebase.json
-
-# Cypress
-cypress/videos/
-cypress/screenshots/
-
-# E2E
-e2e/
-
-# System Files
-.DS_Store
-Thumbs.db
+# Logs
+logs
+*.log
